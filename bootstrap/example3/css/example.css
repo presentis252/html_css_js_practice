@@ -1,0 +1,30 @@
+*{
+  margin: 1px;
+}
+
+strong {
+  color: red;
+}
+
+p.margin {
+  margin-top: 50px;
+}
+
+.darkTemplar {
+  color: white;
+  background-color: white;
+}
+
+#navigation {
+  background-color: gray;
+  color: yellow;
+}
+
+input[type="text"]{
+  width: 200px;
+  border: 1px solid #202020;
+}
+
+a:hover{
+  color: pink;
+}
