@@ -5,7 +5,7 @@
     <script>
 
       function setRed() {
-        var temp = document.getElementsByTagName('h1')[0];
+        var temp = document.getElementById('text');
         temp.style.color = 'red';
       }
 
@@ -13,7 +13,7 @@
     <title>JavaScript 예제</title>
   </head>
   <body>
-    <h1 class="text">안녕하세요</h1>
+    <h1 id="text">안녕하세요</h1>
     <h1>안녕하세요</h1>
     <button onclick="setRed()">버튼</button>
   </body>
