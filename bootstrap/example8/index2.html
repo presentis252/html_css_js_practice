@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script
+			  src="http://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body>
+    <button class="button">버튼</button>
+    <button id="test">숨겨질 버튼</button>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".button").mouseenter(function(){
+          $("body").css("background-color", "#cccccc");
+        });
+        $(".button").mouseleave(function(){
+          $("body").css("background-color", "#ffffff");
+        });
+      });
+    </script>
+  </body>
+</html>
