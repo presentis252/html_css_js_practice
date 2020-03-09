@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
+    <title></title>
+  </head>
+  <body>
+    <section>
+      <div class="">
+        <div class="">
+          <a href="/todoform">해야할 일들 목록</a>
+        </div>
+        <div class="">
+          새로운 TODO 등록
+        </div>
+      </div>
+      <ul class="todolist">
+        <ul id="todo">
+          <li>TODO</li>
+          <li>
+            <span>자바스크립트 공부하기</span><span>등록날짜</span><span>우선순위</span>
+            <button class="ch-button" type="button" name="button"></button>
+          </li>
+        </ul>
+        <ul id="doing">
+          <li>DOING</li>
+          <li>
+            <span>자바스크립트 공부하기</span><span>등록날짜</span><span>우선순위</span>
+            <button class="ch-button" type="button" name="button"></button>
+          </li>
+        </ul>
+        <ul id="done">
+          <li>DONE</li>
+          <li><span>자바스크립트 공부하기</span><span>등록날짜</span><span>우선순위</span></li>
+        </ul>
+      </ul>
+    </section>
+  </body>
+  <script type="text/javascript">
+    function chtype(data){
+      var oReq = new XMLHttpRequest();
+      oReq.addEventListener("load", function(){
+
+      });
+      oReq.open("POST", '/todotype?id=${data.id}&type=${data.type}');
+      oReq.send();
+    }
+
+    var chtype_button = document.getElementsByClassName('ch-button');
+    // var todo_layout = chtype_button.parentNode;
+    for(var i=0;i<chtype_button.length;i++){
+      chtype_button[i].addEventListener("click", function(){
+        chtype_button[i].parentNode.outerHTML="";
+      })
+    }
+
+  </script>
+</html>

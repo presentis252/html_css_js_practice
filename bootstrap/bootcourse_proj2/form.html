@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>할일 등록</h1>
+    <form action="/todolist/todoaddition" method="post">
+      <div class="">
+        <label for="">어떤 일인가요?</label>
+        <input type="text" id="title" name="title" placeholder="Swift 공부하기(24자까지)" required maxlength="24">
+      </div>
+      <div class="">
+        <label for="">누가 할일인가요?</label>
+        <input type="text" id="name" name="name" placeholder="홍길동" required>
+      </div>
+      <div class="">
+        <label for="">우선순위를 선택하세요</label>
+        <div class="">
+          <label for="first-priority">1순위</label>
+          <input type="radio" id="first-priority" name="sequence" value="1" checked>
+          <label for="second-priority">2순위</label>
+          <input type="radio" id="second-priority" name="sequence" value="2">
+          <label for="third-priority">3순위</label>
+          <input type="radio" id="third-priority" name="sequence" value="3">
+        </div>
+      </div>
+      <div class="">
+        <button type="button"><a href="/todolist"><이전</a></button>
+        <button type="submit">제출</button>
+        <button type="reset">내용 지우기</button>
+      </div>
+    </form>
+  </body>
+</html>
